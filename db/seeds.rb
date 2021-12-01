@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+unless Group.any?
+  Group.create(name: "Основы ruby")
+end
+
+unless Lab.any?
+  group = Group.first
+  Lab.create(title: "Лабораторная №1", group: group, content_path: "placeholder")
+end
