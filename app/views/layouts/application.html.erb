@@ -9,6 +9,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1>
+        Курс "Парадигмы и технологии программирования: основы Ruby"
+      </h1>
+    </header>
+    <div class="main_layout">
+      <%= render "layouts/sidebar" %>
+      <main>
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>

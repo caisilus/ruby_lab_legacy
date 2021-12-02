@@ -1,0 +1,5 @@
+<aside class="sidebar">
+  <% @labs.each do |lab| %>
+    <%= link_to lab.title, labs_url, class: "lab_card" %>
+  <% end %>
+</aside>

@@ -1,0 +1,27 @@
+.sidebar {
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 250px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100%;
+    overflow: auto;
+}
+
+.main_layout {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.lab_card {
+    padding: 0;
+    color: black;
+    margin: 20px;
+}
+
+main {
+    padding: 10px;
+}
