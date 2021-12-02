@@ -14,3 +14,8 @@ unless Lab.any?
   group = Group.first
   Lab.create(title: "Лабораторная №1", group: group, content_path: "placeholder")
 end
+
+unless Task.any?
+  lab = Lab.first
+  lab.tasks.create(title: "Задание 1", content_path: "placeholder1")
+end
