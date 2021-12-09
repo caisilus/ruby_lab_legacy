@@ -12,7 +12,8 @@ end
 
 unless Lab.any?
   group = Group.first
-  Lab.create(title: "Лабораторная №1", group: group, content_path: "placeholder")
+  Lab.create(title: "Лабораторная №1", group: group, content_path: "_lab1.html.erb")
+  Lab.create(title: "Лабораторная №2", group: group, content_path: "placeholder2")
 end
 
 unless Task.any?
