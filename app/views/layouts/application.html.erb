@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
@@ -15,7 +16,6 @@
       </h1>
     </header>
     <div class="main_layout">
-      <%= render "layouts/sidebar" %>
       <main>
         <%= yield %>
       </main>

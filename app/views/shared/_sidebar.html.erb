@@ -1,0 +1,11 @@
+<aside class="sidebar">
+  <h4>Модули курса</h4>
+  <% @sidebar_groups.each do |group| %>
+    <%= button_tag(group.name, class: "collapsible", data: { controller: "collapsible"}) %>
+    <div class="group_content content_hidden">
+      <% group.labs.each do |lab| %>
+      <%= link_to lab.title, lab_url(lab), class: "lab_card" %>
+      <% end %>
+    </div>
+  <% end %>
+</aside>

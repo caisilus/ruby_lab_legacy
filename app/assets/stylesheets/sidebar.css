@@ -15,6 +15,32 @@
     flex-direction: row;
 }
 
+.collapsible {
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    border: 1px solid #999999;
+    outline: 1px;
+}
+
+.active, .collapsible:hover {
+    background-color: #999999;
+}
+
+.content_hidden {
+    display: none;
+}
+
+.content_shown {
+    display: block;
+}
+
+.group_content {
+    overflow: hidden;
+}
 
 .lab_card {
     padding: 0;

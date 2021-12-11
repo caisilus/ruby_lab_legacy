@@ -1,7 +1,5 @@
 class ApplicationController < ActionController::Base
-  # labs are used in application layout
-  def initialize
-    super
-    @labs = Lab.all
+  def not_found
+    render file: "#{Rails.root}/public/404.html", layout: false
   end
 end
