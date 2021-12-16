@@ -5,11 +5,12 @@ class LabsController < SidebarPagesController
   end
 
   def show
-    @lab = Lab.find_by_id(params[:id])
-    @content = lab_content(@lab.content_path)
-    puts @content
+    lab = Lab.find_by_id(params[:id])
+    @content = lab_content(lab.content_path)
     return not_found if @content.nil?
   end
+
+  private
 
   def lab_content(content_name)
     views = File.join('app', 'views')

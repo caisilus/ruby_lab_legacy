@@ -1,1 +1,3 @@
-<%= render partial: 'lab_views/lab1' %>
+<turbo-frame id="lab" data-turbo-action="advance">
+  <%= render partial: @content %>
+</turbo-frame>
