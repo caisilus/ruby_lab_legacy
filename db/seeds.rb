@@ -8,15 +8,22 @@
 
 unless Group.any?
   Group.create(name: "Основы ruby")
+  Group.create(name: "Ruby on Rails")
 end
 
 unless Lab.any?
-  group = Group.first
-  Lab.create(title: "Лабораторная №1", group: group, content_path: "_lab1.html.erb")
-  Lab.create(title: "Лабораторная №2", group: group, content_path: "placeholder2")
+  group = Group.find_by(name: "Основы ruby")
+  group.labs.create(title: "Лабораторная №1", content_path: "lab1")
+  group.labs.create(title: "Лабораторная №2", group: group, content_path: "lab2")
+  group = Group.find_by(name: "Ruby on Rails")
+  group.labs.create(title: "Лабораторная №3", group: group, content_path: "lab3")
 end
 
 unless Task.any?
-  lab = Lab.first
-  lab.tasks.create(title: "Задание 1", content_path: "placeholder1")
+  lab = Lab.find_by(title: "Лабораторная №1")
+  lab.tasks.create(title: "Задание 1", content_path: "default")
+  lab.tasks.create(title: "Задание 2", content_path: "default")
+
+  lab = Lab.find_by(title: "Лабораторная №2")
+  lab.tasks.create(title: "Задание 1", content_path: "default")
 end

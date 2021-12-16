@@ -1,0 +1,11 @@
+<p>
+  <%= task_text %>
+</p>
+<div>
+  <p>Пройдено тестов:</p> <%= "#{successeful} / #{num_tests}" %>
+  <% if successful == num_tests %>
+    <p>Задание пройдено!</p>
+  <% else %>
+    <p>Задание не пройдено.</p>
+  <% end %>
+</div>
