@@ -1,5 +1,7 @@
 module LabsHelper
-  def task_template(template, text, successful, total)
-    render partial: template, locals: { task_text: text, successful: successful, num_test: total }
+  def task_template(template, task)
+    render partial: template, locals: { title: task.title,
+                                        text: task.text,
+                                        percentage: task.last_result.passed_percentage }
   end
 end

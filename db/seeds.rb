@@ -21,9 +21,13 @@ end
 
 unless Task.any?
   lab = Lab.find_by(title: "Лабораторная №1")
-  lab.tasks.create(title: "Задание 1", content_path: "default")
-  lab.tasks.create(title: "Задание 2", content_path: "default")
+  task1 = lab.tasks.create(title: "Задание 1", content_path: "default")
+  task1.task_results.create(total_tests: 200, passed_tests: 200)
+  task2 = lab.tasks.create(title: "Задание 2", content_path: "default")
+  task2.task_results.create(total_tests: 195, passed_tests: 187)
 
   lab = Lab.find_by(title: "Лабораторная №2")
-  lab.tasks.create(title: "Задание 1", content_path: "default")
+  task3 = lab.tasks.create(title: "Задание 1", content_path: "default")
+  task3.task_results.create(total_tests: 154, passed_tests: 132)
 end
+

@@ -1,0 +1,14 @@
+.task_passed {
+    background-color: #04AA6D;
+}
+
+.task_failed {
+    background-color: #B00100;
+    color: #dddddd;
+}
+
+.result_info {
+    background-color: #CCCCCC;
+    border: 1px solid;
+    width: 100%;
+}
