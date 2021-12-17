@@ -11,7 +11,7 @@
 
 <body>
 <header id="header" data-turbo-permanent>
-  <%= render partial: 'shared/navbar' %>
+  <%= render partial: 'shared/navbar', locals: { nav_name: yield(:nav_name) } %>
 </header>
 <div class="main_layout">
   <%= render partial: "shared/sidebar" %>
