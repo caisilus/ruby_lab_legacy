@@ -16,6 +16,8 @@
 <div class="main_layout">
   <%= render partial: "shared/sidebar" %>
   <main>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </main>
 </div>
