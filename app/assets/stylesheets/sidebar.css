@@ -10,6 +10,10 @@
     overflow: auto;
 }
 
+main {
+    width: 100%;
+}
+
 .main_layout {
     display: flex;
     flex-direction: row;

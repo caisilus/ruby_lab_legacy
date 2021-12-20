@@ -10,10 +10,8 @@
   </head>
 
   <body>
-    <header>
-      <h1>
-        Курс "Парадигмы и технологии программирования: основы Ruby"
-      </h1>
+    <header id="header" data-turbo-permanent>
+      <%= render partial: 'shared/navbar', locals: { nav_name: yield(:nav_name) } %>
     </header>
     <div class="main_layout">
       <main>

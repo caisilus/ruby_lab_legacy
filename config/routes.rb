@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get '/labs/:id', to: 'labs#show', as: 'lab'
   get '/labs', to: 'labs#index'
 
+  get '/tasks/new', to: 'task#new'
+  post '/tasks', to: 'task#create'
+
   # for logged in users
   get '/results', to: 'results#index'
 end
